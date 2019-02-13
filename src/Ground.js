@@ -11,7 +11,7 @@ class Ground extends Component {
     return (
       <div className="Ground">
         
-         <MenuAppBar/>
+
           <Routings/>
       </div>
     );

@@ -11,7 +11,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import StarsIcon from '@material-ui/icons/Stars';
+import ContactsIcon from '@material-ui/icons/Contacts';
+import EmailIcon from '@material-ui/icons/Email';
 import IconButton from '@material-ui/core/IconButton';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const styles = {
   list: {
@@ -41,23 +46,23 @@ class TemporaryDrawer extends React.Component {
 
     const sideList = (
       <div className={classes.list}>
+      
+        
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+            <ListItem button key="Home">
+            <ListItemIcon><AccountCircleIcon/></ListItemIcon>
+              <Link to="/"><ListItemText primary={"Home"} /></Link>
             </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+            <ListItem button key="Progects">
+            <ListItemIcon><StarsIcon/></ListItemIcon>
+              <Link to="/projects"><ListItemText primary={"Projects"} /></Link>
             </ListItem>
-          ))}
+            <ListItem button key="Contacts">
+            <ListItemIcon><EmailIcon/></ListItemIcon>
+              <Link to="/contacts"><ListItemText primary={"Constacts"} /></Link>
+            </ListItem>
         </List>
+        <Divider/>
       </div>
     );
 

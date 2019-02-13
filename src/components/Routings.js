@@ -5,6 +5,7 @@ import Butt from './Buttons';
 import MediaCard from './Card';
 import FloatingActionButtonZoom from './FloatingActionButtonZoom';
 import CircularIntegration from '../smallelements/Progress';
+import MenuAppBar from './MenuAppBar';
 const Rest = () =>{
     return(
         <div>
@@ -21,20 +22,7 @@ class Routings extends Component{
             <div>
                 <Router>
                     <div>
-                    <ul>
-                        <li>
-                        <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                        <Link to="/projects">Projects</Link>
-                        </li>
-                        <li>
-                        <Link to="/contacts">Contacts</Link>
-                        </li>
-                    </ul>
-
-                    <hr />
-
+                        <MenuAppBar/>
                     <Route exact path="/" component={MediaCard} />
                     <Route path="/projects" component={FloatingActionButtonZoom} />
                     <Route path="/contacts" component={Rest} />
