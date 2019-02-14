@@ -2,24 +2,23 @@ import React, { Component } from 'react';
 import './App.css';
 import 'typeface-roboto';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import Ground from './Ground';
+import purple from '@material-ui/core/colors/purple';
+import green from '@material-ui/core/colors/green';
+
 const theme = createMuiTheme({
-  palette: {
-    primary: {
-      // light: will be calculated from palette.primary.main,
-      main: '#ff4400',
-      // dark: will be calculated from palette.primary.main,
-      // contrastText: will be calculated to contrast with palette.primary.main
-    },
-    secondary: {
-      light: '#0066ff',
-      main: '#0044ff',
-      // dark: will be calculated from palette.secondary.main,
-      contrastText: '#ffcc00',
-    },
-    // error: will use the default color
+  typography: {
+    useNextVariants: true,
   },
-})
+  palette: {
+    primary: green,
+    secondary: purple,
+  },
+  status: {
+    danger: 'orange',
+  },
+});
 
 class App extends Component {
   render() {

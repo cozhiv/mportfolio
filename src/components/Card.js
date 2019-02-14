@@ -12,10 +12,12 @@ import IMG from './hg.jpg';
 
 const styles = {
   card: {
-    maxWidth: 345,
+    width:"60%",
+    maxWidth: "100%",
+    marginLeft:"20%",
   },
   media: {
-    height: 140,
+    height: 200,
   },
 };
 
