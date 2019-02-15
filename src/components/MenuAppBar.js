@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -10,7 +10,8 @@ import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import MenuListComposition from './MenuListComposition';
-import TemporaryDrawer from './Drawer';
+import AppDrawer from './Drawer';
+import NavTabs from './NavTabs';
 const styles = theme => ({
   root: {
     width: '100%',
@@ -71,35 +72,47 @@ const styles = theme => ({
   },
 });
 
-function SearchAppBar(props) {
-  const { classes } = props;
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          
-          <TemporaryDrawer/>
-          <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Zhivko
-          </Typography>
-          <div className={classes.grow} />
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+class SearchAppBar extends Component{
+  constructor(props){
+    super(props);
+    this.state = {selection:"/"}
+    this.handleTheSelection = this.handleTheSelection.bind(this)
+  }
+  handleTheSelection(event, selection){
+    this.setState({selection:selection})
+  }
+  render(){
+    const { classes } = this.props;
+    return (
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            
+            <AppDrawer/>
+            <Typography className={classes.title} variant="h6" color="inherit" noWrap>
+              <NavTabs select={this.state.selection} handleSelection={this.handleTheSelection} />
+            </Typography>
+            <div className={classes.grow} />
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+              />
             </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-            />
-          </div>
-        </Toolbar>
-      </AppBar>
+          </Toolbar>
+        </AppBar>
     </div>
   );
+  }
+  
 }
+
 
 SearchAppBar.propTypes = {
   classes: PropTypes.object.isRequired,

@@ -12,8 +12,8 @@ const theme = createMuiTheme({
     useNextVariants: true,
   },
   palette: {
-    primary: green,
-    secondary: purple,
+    primary: purple,
+    secondary: green,
   },
   status: {
     danger: 'orange',

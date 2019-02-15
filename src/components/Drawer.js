@@ -2,21 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-//import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import StarsIcon from '@material-ui/icons/Stars';
 import ContactsIcon from '@material-ui/icons/Contacts';
 import EmailIcon from '@material-ui/icons/Email';
 import IconButton from '@material-ui/core/IconButton';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link as RouterLink } from 'react-router-dom'
+
 
 const styles = {
   list: {
@@ -27,7 +25,7 @@ const styles = {
   },
 };
 
-class TemporaryDrawer extends React.Component {
+class AppDrawer extends React.Component {
   state = {
     top: false,
     left: false,
@@ -49,17 +47,17 @@ class TemporaryDrawer extends React.Component {
       
         
         <List>
-            <ListItem button key="Home">
+            <ListItem button key="Home" component={RouterLink} to="/">
             <ListItemIcon><AccountCircleIcon/></ListItemIcon>
-              <Link to="/"><ListItemText primary={"Home"} /></Link>
+            <ListItemText primary={"Home"} />
             </ListItem>
-            <ListItem button key="Progects">
+            <ListItem button key="Progects" component={RouterLink} to="/projects">
             <ListItemIcon><StarsIcon/></ListItemIcon>
-              <Link to="/projects"><ListItemText primary={"Projects"} /></Link>
+              <ListItemText primary={"Projects"} />
             </ListItem>
-            <ListItem button key="Contacts">
+            <ListItem button key="Contacts" component={RouterLink} to="/contacts">
             <ListItemIcon><EmailIcon/></ListItemIcon>
-              <Link to="/contacts"><ListItemText primary={"Constacts"} /></Link>
+              <ListItemText primary={"Constacts"} />
             </ListItem>
         </List>
         <Divider/>
@@ -87,8 +85,8 @@ class TemporaryDrawer extends React.Component {
   }
 }
 
-TemporaryDrawer.propTypes = {
+AppDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TemporaryDrawer);
+export default withStyles(styles)(AppDrawer);
