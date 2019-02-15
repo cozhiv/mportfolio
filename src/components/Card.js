@@ -36,8 +36,10 @@ function MediaCard(props) {
             Zhivko Dimitrov
           </Typography>
           <Typography component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          Predators are physically distinguished from humans by their greater height, arthropod-like mandibles and long, hair-like appendages on their heads that are set into their skulls (popularly perceived as "dreadlocks"). 
+          Their bodies are resilient to damage, capable of recovering from multiple gunshot wounds and radiation doses that would prove fatal to humans. 
+          Their wounds do however require medical attention and they incorporate a portable surgical kit in their armor for this purpose. They are also capable of enduring excruciating pain.
+           Predators are much stronger than humans, having been portrayed as being easily capable of outmatching a conditioned adult human male and shattering solid concrete with their bare hands. They are also skilled climbers, and will readily move through trees or across rooftops in pursuit of prey.
           </Typography>
         </CardContent>
       </CardActionArea>
