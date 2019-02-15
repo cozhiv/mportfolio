@@ -33,7 +33,8 @@ const styles = theme => ({
 
 class NavTabs extends React.Component {
     constructor(props){
-        super(props)        
+        super(props)
+        //this.state = {value:'/'}
         this.handleChange = this.handleChange.bind(this)
     }
     

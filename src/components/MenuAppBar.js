@@ -76,21 +76,25 @@ class SearchAppBar extends Component{
   constructor(props){
     super(props);
     this.state = {selection:"/"}
-    this.handleTheSelection = this.handleTheSelection.bind(this)
+    this.handleTabSelection = this.handleTabSelection.bind(this)
+    this.handleDrawerSelection = this.handleDrawerSelection.bind(this)
   }
-  handleTheSelection(event, selection){
+  handleTabSelection = (event, selection)=>{
     this.setState({selection:selection})
   }
+  handleDrawerSelection = (value)=>{
+     this.setState({selection:value})
+  }
   render(){
-    const { classes } = this.props;
+    const { classes, selection } = this.props;
     return (
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
             
-            <AppDrawer/>
+            <AppDrawer handleSelection={this.handleDrawerSelection}/>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              <NavTabs select={this.state.selection} handleSelection={this.handleTheSelection} />
+              <NavTabs select={this.state.selection} handleSelection={this.handleTabSelection} />
             </Typography>
             <div className={classes.grow} />
             <div className={classes.search}>

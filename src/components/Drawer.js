@@ -26,19 +26,26 @@ const styles = {
 };
 
 class AppDrawer extends React.Component {
-  state = {
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
-  };
+  constructor(props){
+    super(props)
+    this.state = {
+      top: false,
+      left: false,
+      bottom: false,
+      right: false,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  
 
   toggleDrawer = (side, open) => () => {
     this.setState({
       [side]: open,
     });
   };
-
+  handleClick = (value)=>{
+    this.props.handleSelection(value);
+  }
   render() {
     const { classes } = this.props;
 
@@ -46,16 +53,16 @@ class AppDrawer extends React.Component {
       <div className={classes.list}>
       
         
-        <List>
-            <ListItem button key="Home" component={RouterLink} to="/">
+        <List >
+            <ListItem value='/' button key="Home" component={RouterLink} to="/" onClick={()=>{this.handleClick('/')}}>
             <ListItemIcon><AccountCircleIcon/></ListItemIcon>
             <ListItemText primary={"Home"} />
             </ListItem>
-            <ListItem button key="Progects" component={RouterLink} to="/projects">
+            <ListItem value='/projects' button key="Progects" component={RouterLink} to="/projects" onClick={()=>{this.handleClick('/projects')}}>
             <ListItemIcon><StarsIcon/></ListItemIcon>
               <ListItemText primary={"Projects"} />
             </ListItem>
-            <ListItem button key="Contacts" component={RouterLink} to="/contacts">
+            <ListItem value='/contacts' button key="Contacts" component={RouterLink} to="/contacts" onClick={()=>{this.handleClick('/contacts')}}>
             <ListItemIcon><EmailIcon/></ListItemIcon>
               <ListItemText primary={"Constacts"} />
             </ListItem>

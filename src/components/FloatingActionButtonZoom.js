@@ -15,7 +15,6 @@ import UpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Web from '@material-ui/icons/Web';
 import green from '@material-ui/core/colors/green';
 import MenuListComposition from './MenuListComposition';
-import LinkTo from './Link';
 function TabContainer(props) {
   const { children, dir } = props;
 
@@ -117,6 +116,7 @@ class FloatingActionButtonZoom extends React.Component {
             indicatorColor="primary"
             textColor="primary"
             variant="fullWidth"
+            centered
           >
             <Tab label="Item One" />
             <Tab label="Item Two" />
