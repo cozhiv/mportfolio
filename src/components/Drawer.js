@@ -16,14 +16,15 @@ import IconButton from '@material-ui/core/IconButton';
 import { Link as RouterLink } from 'react-router-dom'
 
 
-const styles = {
+const styles = (theme)=>({
   list: {
     width: 250,
   },
   fullList: {
     width: 'auto',
   },
-};
+  
+});
 
 class AppDrawer extends React.Component {
   constructor(props){
@@ -43,8 +44,8 @@ class AppDrawer extends React.Component {
       [side]: open,
     });
   };
-  handleClick = (value)=>{
-    this.props.handleSelection(value);
+  handleClick = (event, value)=>{
+    this.props.handleSelection(event, value);
   }
   render() {
     const { classes } = this.props;
@@ -54,6 +55,7 @@ class AppDrawer extends React.Component {
       
         
         <List >
+          
             <ListItem value='/' button key="Home" component={RouterLink} to="/" onClick={()=>{this.handleClick('/')}}>
             <ListItemIcon><AccountCircleIcon/></ListItemIcon>
             <ListItemText primary={"Home"} />

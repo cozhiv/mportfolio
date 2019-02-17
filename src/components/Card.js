@@ -8,16 +8,15 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import IMG from './hg.jpg';
+import IMG from './predator.jpg';
 
 const styles = {
   card: {
-    width:"60%",
+    align:'center',
     maxWidth: "100%",
-    marginLeft:"20%",
   },
   media: {
-    height: 200,
+    height: 400,
   },
 };
 
@@ -33,7 +32,7 @@ function MediaCard(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Zhivko Dimitrov
+            Project Hunter
           </Typography>
           <Typography component="p">
           Predators are physically distinguished from humans by their greater height, arthropod-like mandibles and long, hair-like appendages on their heads that are set into their skulls (popularly perceived as "dreadlocks"). 

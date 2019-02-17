@@ -15,6 +15,10 @@ import UpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Web from '@material-ui/icons/Web';
 import green from '@material-ui/core/colors/green';
 import MenuListComposition from './MenuListComposition';
+import DetailedExpansionPanel from './ExpansionPanel';
+import CustomizedExpansionPanel from './ContactsPanel';
+import ControlledExpansionPanels from './ControlledExpansionPanels';
+import {Link as RouterLink, Route, BroweserRouter as Router} from 'react-router-dom';
 function TabContainer(props) {
   const { children, dir } = props;
 
@@ -33,9 +37,8 @@ TabContainer.propTypes = {
 const styles = theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: 800,
     position: 'relative',
-    minHeight: 200,
+    minHeight: 180,
   },
   fab: {
     position: 'absolute',
@@ -99,17 +102,12 @@ class FloatingActionButtonZoom extends React.Component {
         icon: <UpIcon />,
         link:"#",
       },
-      {
-        color: 'fourth',
-        className: classes.fab,
-        icon: <Web />,
-        link:"#",
-      },
     ];
 
     return (
       <div className={classes.root}>
         <AppBar position="static" color="default">
+        
           <Tabs
             value={this.state.value}
             onChange={this.handleChange}
@@ -118,10 +116,9 @@ class FloatingActionButtonZoom extends React.Component {
             variant="fullWidth"
             centered
           >
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
-            <Tab label="Item T4ee" />
+            <Tab label="JavaScript" />
+            <Tab label="Python" />
+            <Tab label="Other" />
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -129,26 +126,11 @@ class FloatingActionButtonZoom extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <TabContainer dir={theme.direction}><MenuListComposition/></TabContainer>
-          <TabContainer dir={theme.direction}>Item Two</TabContainer>
-          <TabContainer dir={theme.direction}>Item Three</TabContainer>
-          <TabContainer dir={theme.direction}>Item 4</TabContainer>
+          <TabContainer dir={theme.direction}><ControlledExpansionPanels/></TabContainer>
+          <TabContainer dir={theme.direction}><DetailedExpansionPanel/></TabContainer>
+          <TabContainer dir={theme.direction}><CustomizedExpansionPanel/></TabContainer>
         </SwipeableViews>
-        {fabs.map((fab, index) => (
-          <Zoom
-            key={fab.color}
-            in={this.state.value === index}
-            timeout={transitionDuration}
-            style={{
-              transitionDelay: `${this.state.value === index ? transitionDuration.exit : 0}ms`,
-            }}
-            unmountOnExit
-          >
-            <Fab className={fab.className} color="secondary">
-             {fab.icon}
-            </Fab>
-          </Zoom>
-        ))}
+        
       </div>
     );
   }

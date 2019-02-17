@@ -4,8 +4,10 @@ import TextField from '@material-ui/core/TextField';
 import Butt from './Buttons';
 import MediaCard from './Card';
 import FloatingActionButtonZoom from './FloatingActionButtonZoom';
-import CircularIntegration from '../smallelements/Progress';
+import CircularIntegration from './Progress';
 import MenuAppBar from './MenuAppBar';
+import SimpleCard from './ContactCard';
+
 const Rest = () =>{
     return(
         <div>
@@ -14,18 +16,15 @@ const Rest = () =>{
     )
 }
 class Routings extends Component{
-    constructor(props){
-        super(props)
-    }
     render(){
         return(
             <div>
                 <Router>
                     <div>
-                        <MenuAppBar/>
+                    <MenuAppBar/>
                     <Route exact path="/" component={MediaCard} />
                     <Route path="/projects" component={FloatingActionButtonZoom} />
-                    <Route path="/contacts" component={Rest} />
+                    <Route path="/contacts" component={SimpleCard} />
                 </div>
                 </Router>
             </div>
