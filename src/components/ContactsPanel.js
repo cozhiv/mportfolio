@@ -68,13 +68,11 @@ class CustomizedExpansionPanel extends React.Component {
           onChange={this.handleChange('panel1')}
         >
           <ExpansionPanelSummary>
-            <Typography>Collapsible Group Item #1</Typography>
+            <Typography>Boltzmann constant calculation electronic device</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus
-              ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+              Electronic device that amplifies the thermal noise of its electric circuit and uses Johnson-Nyquist law to evaluate the Boltzmann constant.
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -84,13 +82,11 @@ class CustomizedExpansionPanel extends React.Component {
           onChange={this.handleChange('panel2')}
         >
           <ExpansionPanelSummary>
-            <Typography>Collapsible Group Item #2</Typography>
+            <Typography>Microwave plasma enhanced reactor for carbon nano structures deposition</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus
-              ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+              An experimental reactor for deposition of carbon nanostructures in atmospheric pressuere that uses mini source of microwave generated plasma. (Low temperature plasmas)
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -100,13 +96,11 @@ class CustomizedExpansionPanel extends React.Component {
           onChange={this.handleChange('panel3')}
         >
           <ExpansionPanelSummary>
-            <Typography>Collapsible Group Item #3</Typography>
+            <Typography>Optical spectroscopy</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus
-              ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+              Optical Spectroscopy of mini plasma jet source. Simulation of OH emission lines, comparison with collected data and evaluation of the gass temperature. The evaluated values are used to find the rest of the plasma parameters using self consistent plasma model. 
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>

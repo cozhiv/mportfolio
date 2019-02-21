@@ -118,7 +118,7 @@ class FloatingActionButtonZoom extends React.Component {
           >
             <Tab label="JavaScript" />
             <Tab label="Python" />
-            <Tab label="Other" />
+            <Tab label="Physics" />
           </Tabs>
         </AppBar>
         <SwipeableViews

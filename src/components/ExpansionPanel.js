@@ -11,6 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
+import GitHubLink from './GitHubLink';
 
 const styles = theme => ({
   root: {
@@ -54,22 +55,22 @@ function DetailedExpansionPanel(props) {
       <ExpansionPanel defaultExpanded>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <div className={classes.column}>
-            <Typography className={classes.heading}>Location</Typography>
+            <Typography className={classes.heading}>Backtesting <br/> Create cryptocurrency trading strategy</Typography>
           </div>
           <div className={classes.column}>
-            <Typography className={classes.secondaryHeading}>Select trip destination</Typography>
+            <Typography className={classes.secondaryHeading}>Full-Stack Flask Web App</Typography>
           </div>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className={classes.details}>
           <div className={classes.column} />
           <div className={classes.column}>
-            <Chip label="Barbados" className={classes.chip} onDelete={() => {}} />
+          <Typography className={classes.secondaryHeading}>The app allows the user to test his/her own portfolio with a bundle of cryptocurrencies selection, based on user's decision. The trading strategy can be saved if the user has validated by email profile registration.</Typography>
           </div>
           <div className={classNames(classes.column, classes.helper)}>
             <Typography variant="caption">
-              Select your destination of choice
+            JWT Token authentication/authoriazation, <br/> SQLAlchemy, Flask-Restful
               <br />
-              <a href="#sub-labels-and-columns" className={classes.link}>
+              <a href="http://flask.pocoo.org/" target="_blank" className={classes.link}>
                 Learn more
               </a>
             </Typography>
@@ -77,10 +78,7 @@ function DetailedExpansionPanel(props) {
         </ExpansionPanelDetails>
         <Divider />
         <ExpansionPanelActions>
-          <Button size="small">Cancel</Button>
-          <Button size="small" color="primary">
-            Save
-          </Button>
+          <GitHubLink location="https://github.com/cozhiv/backtesting"/>
         </ExpansionPanelActions>
       </ExpansionPanel>
     </div>

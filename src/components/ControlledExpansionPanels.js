@@ -6,6 +6,8 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import GitHubLink from './GitHubLink';
+import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
   root: {
@@ -41,52 +43,52 @@ class ControlledExpansionPanels extends React.Component {
       <div className={classes.root}>
         <ExpansionPanel expanded={expanded === 'panel1'} onChange={this.handleChange('panel1')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography className={classes.heading}>General settings</Typography>
-            <Typography className={classes.secondaryHeading}>I am an expansion panel</Typography>
+            <Typography className={classes.heading}>Portfolio</Typography>
+            <Typography className={classes.secondaryHeading}>React and MaterialUI</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-              maximus est, id dignissim quam.
+              This is the current application. The app uses React Routing Dom for its three sections. A Drawer, Navigation bar, Expansion Panels and few other eye candy MaterialUI components.
+              <GitHubLink location="https://github.com/cozhiv/mportfolio" />
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel expanded={expanded === 'panel2'} onChange={this.handleChange('panel2')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography className={classes.heading}>Users</Typography>
+            <Typography className={classes.heading}>Phrase Highlighter</Typography>
             <Typography className={classes.secondaryHeading}>
-              You are currently not an owner
+              jQuery, CSS3, PhP
             </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
-              diam eros in elit. Pellentesque convallis laoreet laoreet.
+              A mobile responsive web gadget that allows the user to highlight and label words or phrases from a text. The text can be changed with ease by the developer who uses this extention. The app works well on mobiles. This application is perfect for market research purposes. There is backend in PhP that collects the data from selected phrases for each respondent. In addition it calculates statistics from the collected data and shows dynamic heatmap to a researcher.
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel expanded={expanded === 'panel3'} onChange={this.handleChange('panel3')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography className={classes.heading}>Advanced settings</Typography>
+            <Typography className={classes.heading}>Image Uploader</Typography>
             <Typography className={classes.secondaryHeading}>
-              Filtering has been entirely disabled for whole web server
+              jQuery, CSS, PhP
             </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-              eros, vitae egestas augue. Duis vel est augue.
+              Web application that allows a researcher to upload small pictures, which can be used as icons in future market research projects. 
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel expanded={expanded === 'panel4'} onChange={this.handleChange('panel4')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography className={classes.heading}>Personal data</Typography>
+            <Typography className={classes.heading}>Moon Wars game</Typography>
+            <Typography className={classes.secondaryHeading}>
+              javaScript, CSS
+            </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-              eros, vitae egestas augue. Duis vel est augue.
+              Funny game written in JavaScript which runs on browsers and is mobile responsive. It uses animations that represent real physical trajecetories, paraboles and vibrations of objects. The motions immitate the real conditions on the Moon.
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
