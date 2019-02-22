@@ -48,7 +48,7 @@ class ControlledExpansionPanels extends React.Component {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              This is the current application. The app uses React Routing Dom for its three sections. A Drawer, Navigation bar, Expansion Panels and few other eye candy MaterialUI components.
+              This is the current application. The app uses React Routing Dom for its three sections, Drawer, Navigation bar, Expansion Panels and few other eye candy MaterialUI components.
               <GitHubLink location="https://github.com/cozhiv/mportfolio" />
             </Typography>
           </ExpansionPanelDetails>
@@ -62,7 +62,7 @@ class ControlledExpansionPanels extends React.Component {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              A mobile responsive web gadget that allows the user to highlight and label words or phrases from a text. The text can be changed with ease by the developer who uses this extention. The app works well on mobiles. This application is perfect for market research purposes. There is backend in PhP that collects the data from selected phrases for each respondent. In addition it calculates statistics from the collected data and shows dynamic heatmap to a researcher.
+              A mobile responsive web gadget that allows highlighting and labeling of words and phrases. This application is perfect for market research purposes. Backend written in PhP collects the data of the selected phrases for each respondent. In addition it calculates statistics from the collected data and shows dynamic heatmap to a researcher.
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -88,7 +88,7 @@ class ControlledExpansionPanels extends React.Component {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Funny game written in JavaScript which runs on browsers and is mobile responsive. It uses animations that represent real physical trajecetories, paraboles and vibrations of objects. The motions immitate the real conditions on the Moon.
+              Funny game written in JavaScript which runs on browsers and is mobile responsive. It uses animations that represent real physical trajecetories, paraboles and vibrations of objects. The motions immitate real conditions on the Moon.
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>

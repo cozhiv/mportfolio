@@ -64,7 +64,7 @@ function DetailedExpansionPanel(props) {
         <ExpansionPanelDetails className={classes.details}>
           <div className={classes.column} />
           <div className={classes.column}>
-          <Typography className={classes.secondaryHeading}>The app allows the user to test his/her own portfolio with a bundle of cryptocurrencies selection, based on user's decision. The trading strategy can be saved if the user has validated by email profile registration.</Typography>
+          <Typography className={classes.secondaryHeading}>The app allows the user to test his/her own portfolio with a bundle of cryptocurrencies selection, based on user's decision. The trading strategy can be saved if the user has email varyfied profile registration.</Typography>
           </div>
           <div className={classNames(classes.column, classes.helper)}>
             <Typography variant="caption">
