@@ -8,7 +8,6 @@ import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { withStyles } from '@material-ui/core/styles';
-import LinkTo from './Link';
 const styles = theme => ({
   root: {
     display: 'flex',

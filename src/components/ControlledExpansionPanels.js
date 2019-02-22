@@ -7,7 +7,6 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import GitHubLink from './GitHubLink';
-import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
   root: {

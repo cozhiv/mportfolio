@@ -8,8 +8,6 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Chip from '@material-ui/core/Chip';
-import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import GitHubLink from './GitHubLink';
 
@@ -70,7 +68,7 @@ function DetailedExpansionPanel(props) {
             <Typography variant="caption">
             JWT Token authentication/authoriazation, <br/> SQLAlchemy, Flask-Restful
               <br />
-              <a href="http://flask.pocoo.org/" target="_blank" className={classes.link}>
+              <a href="http://flask.pocoo.org/" rel="noopener noreferrer" target="_blank" className={classes.link}>
                 Learn more
               </a>
             </Typography>

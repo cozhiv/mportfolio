@@ -1,20 +1,10 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import TextField from '@material-ui/core/TextField';
-import Butt from './Buttons';
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import MediaCard from './Card';
 import FloatingActionButtonZoom from './FloatingActionButtonZoom';
-import CircularIntegration from './Progress';
 import MenuAppBar from './MenuAppBar';
 import SimpleCard from './ContactCard';
 
-const Rest = () =>{
-    return(
-        <div>
-        <TextField/><Butt/><CircularIntegration/>
-    </div>
-    )
-}
 class Routings extends Component{
     render(){
         return(

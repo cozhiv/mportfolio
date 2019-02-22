@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import 'typeface-roboto';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Ground from './Ground';
 import deepPurple from '@material-ui/core/colors/deepPurple';
-import green from '@material-ui/core/colors/green';
-import red from '@material-ui/core/colors/red';
-import { dark } from '@material-ui/core/styles/createPalette';
 import teal from '@material-ui/core/colors/teal'
 
 const theme = createMuiTheme({

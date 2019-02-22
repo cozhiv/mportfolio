@@ -1,24 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import SwipeableViews from 'react-swipeable-views';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import Zoom from '@material-ui/core/Zoom';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
-import UpIcon from '@material-ui/icons/KeyboardArrowUp';
-import Web from '@material-ui/icons/Web';
 import green from '@material-ui/core/colors/green';
-import MenuListComposition from './MenuListComposition';
 import DetailedExpansionPanel from './ExpansionPanel';
 import CustomizedExpansionPanel from './ContactsPanel';
 import ControlledExpansionPanels from './ControlledExpansionPanels';
-import {Link as RouterLink, Route, BroweserRouter as Router} from 'react-router-dom';
 function TabContainer(props) {
   const { children, dir } = props;
 
@@ -48,15 +39,6 @@ const styles = theme => ({
   fabGreen: {
     color: theme.palette.common.white,
     backgroundColor: green[500],
-    backgroundColor: green[500],
-    backgroundColor: green[500],
-    backgroundColor: green[500],
-    backgroundColor: green[500],
-    backgroundColor: green[500],
-    backgroundColor: green[500],
-    backgroundColor: green[500],
-    backgroundColor: green[500],
-    backgroundColor: green[500],
     '&:hover': {
       backgroundColor: green[600],
     },
@@ -78,31 +60,6 @@ class FloatingActionButtonZoom extends React.Component {
 
   render() {
     const { classes, theme } = this.props;
-    const transitionDuration = {
-      enter: theme.transitions.duration.enteringScreen,
-      exit: theme.transitions.duration.leavingScreen,
-    };
-
-    const fabs = [
-      {
-        color: 'primary',
-        className: classes.fab,
-        icon: <AddIcon />,
-        link:"#",
-      },
-      {
-        color: 'secondary',
-        className: classes.fab,
-        icon: <EditIcon />,
-        link:"#",
-      },
-      {
-        color: 'inherit',
-        className: classNames(classes.fab, classes.fabGreen),
-        icon: <UpIcon />,
-        link:"#",
-      },
-    ];
 
     return (
       <div className={classes.root}>

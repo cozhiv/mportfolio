@@ -4,7 +4,7 @@ import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
-
+import ScienceArticleLink from './ScienceArticle';
 const ExpansionPanel = withStyles({
   root: {
     border: '1px solid rgba(0,0,0,.125)',
@@ -68,11 +68,12 @@ class CustomizedExpansionPanel extends React.Component {
           onChange={this.handleChange('panel1')}
         >
           <ExpansionPanelSummary>
-            <Typography>Boltzmann constant calculation electronic device</Typography>
+            <Typography> Electronic device for determination of Boltzmann constant</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Electronic device that amplifies the thermal noise of its electric circuit and uses Johnson-Nyquist law to evaluate the Boltzmann constant.
+              Electronic device that measures the voltage fluctuations of nF capacitors by amplifying it with low-noise operational amplifiers. Determination of the Boltzmann constant applying Johnson-Nyquist theorem for the electronic circuit.
+              <ScienceArticleLink location="https://arxiv.org/abs/1703.05224"/>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -82,11 +83,13 @@ class CustomizedExpansionPanel extends React.Component {
           onChange={this.handleChange('panel2')}
         >
           <ExpansionPanelSummary>
-            <Typography>Microwave plasma enhanced reactor for carbon nano structures deposition</Typography>
+            <Typography>Microwave plasma enhanced reactor for carbon nano structures deposition.</Typography>
+            
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
               An experimental reactor for deposition of carbon nanostructures in atmospheric pressuere that uses mini source of microwave generated plasma. (Low temperature plasmas)
+              <ScienceArticleLink location='https://www.researchgate.net/publication/309686706_Plasma_reactor_for_deposition_of_carbon_nanowalls_at_atmospheric_pressure'/>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>

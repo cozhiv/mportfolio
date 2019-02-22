@@ -9,18 +9,10 @@ import Typography from '@material-ui/core/Typography';
 import CallIcon from '@material-ui/icons/Call'
 import Fab from '@material-ui/core/Fab';
 import MailIcon from '@material-ui/icons/Mail';
-import SvgIcon from '@material-ui/core/SvgIcon';
-import { Link as RouterLink } from 'react-router-dom'
-import Link from '@material-ui/core/Link';
-
-const MyLink = props => <RouterLink to="https://github.com/cozhiv" {...props} />
+import LinkedInLink from './LinkedIn';
+import GitPic from './Github.png'
 
 
-//const emailContent=`mailto:cozhiv@gmail.com?subject=portfolio&body=${escape(Hello Mr Dimitrov,)}`
-//window.location.href=emailContent
-//window.location.href="tel://"+PhoneNumber;
-//window.open('tel:+359893310996')
-/* <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path> */
 const styles = theme=>({
   card: {
     minWidth: 275,
@@ -44,27 +36,16 @@ const styles = theme=>({
   },
 });
 
-
 class SimpleCard extends Component{
-    constructor(props){
-        super(props)
-    }
     callZhi(event){
-        //console.log(window)
-        //window.open('tel:+359893310996')
         window.location.href="tel:+359893310996"
     }
     mailZhi(event){
         window.location.href=`mailto:cozhiv@gmail.com?subject=portfolio&body=${escape("Hello Mr Dimitrov,")}`
     }
-    redirectToGitHub(event){
-        window.open('https://github.com/cozhiv')
-    }
     
     render(){
         const { classes } = this.props;
-        const bull = <span className={classes.bullet}>•</span>;
-        const Path =()=> (<path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path>)
         return (
             <Card className={classes.card}>
               <CardContent>
@@ -81,10 +62,13 @@ class SimpleCard extends Component{
                   <MailIcon/> 
                   </Fab> cozhiv@gmail.com
                 </Typography>
+                <br/><br/>
                 <Typography variant="h5" component="h2">
-                <Link component={MyLink}>
-                <Button onClick={this.redirectToGitHub}><SvgIcon viewBox="0 0 24 24" ><Path/></SvgIcon></Button>
-                </Link>
+                
+                <a href='https://github.com/cozhiv' rel="noopener noreferrer" target="_blank">
+                <img src={GitPic} alt="GitHub icon"></img>
+                 </a>
+                <LinkedInLink location="https://www.linkedin.com/in/zhivko-dimitrov-5601678a/"/>
                 
                 </Typography>
                 <Typography className={classes.pos} color="textSecondary">
