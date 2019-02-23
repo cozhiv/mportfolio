@@ -6,7 +6,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import GitHubLink from './GitHubLink';
+import GitHubLink from './visuals/GitHubLink';
 
 const styles = theme => ({
   root: {
@@ -23,7 +23,7 @@ const styles = theme => ({
   },
 });
 
-class ControlledExpansionPanels extends React.Component {
+class FirstGroupProjects extends React.Component {
   state = {
     expanded: null,
   };
@@ -47,7 +47,7 @@ class ControlledExpansionPanels extends React.Component {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              This is the current application. The app uses React Routing Dom for its three sections, Drawer, Navigation bar, Expansion Panels and few other eye candy MaterialUI components.
+              Current application. The app uses React Routing Dom for its three sections, Drawer, Navigation bar, Expansion Panels and few other eye candy MaterialUI components.
               <GitHubLink location="https://github.com/cozhiv/mportfolio" />
             </Typography>
           </ExpansionPanelDetails>
@@ -96,8 +96,8 @@ class ControlledExpansionPanels extends React.Component {
   }
 }
 
-ControlledExpansionPanels.propTypes = {
+FirstGroupProjects.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ControlledExpansionPanels);
+export default withStyles(styles)(FirstGroupProjects);

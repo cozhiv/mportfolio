@@ -8,7 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import IMG from './predator.jpg';
+import IMG from './visuals/predator.jpg';
 
 const styles = {
   card: {
@@ -20,7 +20,7 @@ const styles = {
   },
 };
 
-function MediaCard(props) {
+function HomePanel(props) {
   const {classes} = props;
   return (
     <Card className={classes.card}>
@@ -54,8 +54,8 @@ function MediaCard(props) {
   );
 }
 
-MediaCard.propTypes = {
+HomePanel.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(MediaCard);
+export default withStyles(styles)(HomePanel);

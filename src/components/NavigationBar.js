@@ -69,7 +69,7 @@ const styles = theme => ({
   },
 });
 
-class SearchAppBar extends Component{
+class NavigationBar extends Component{
   constructor(props){
     super(props);
     this.state = {selection:"/"}
@@ -114,9 +114,8 @@ class SearchAppBar extends Component{
   
 }
 
-
-SearchAppBar.propTypes = {
+NavigationBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SearchAppBar);
+export default withStyles(styles)(NavigationBar);

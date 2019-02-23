@@ -9,7 +9,7 @@ import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Divider from '@material-ui/core/Divider';
-import GitHubLink from './GitHubLink';
+import GitHubLink from './visuals/GitHubLink';
 
 const styles = theme => ({
   root: {
@@ -46,7 +46,7 @@ const styles = theme => ({
   },
 });
 
-function DetailedExpansionPanel(props) {
+function SecondGroupProjects(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
@@ -83,8 +83,8 @@ function DetailedExpansionPanel(props) {
   );
 }
 
-DetailedExpansionPanel.propTypes = {
+SecondGroupProjects.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(DetailedExpansionPanel);
+export default withStyles(styles)(SecondGroupProjects);

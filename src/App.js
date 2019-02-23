@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import 'typeface-roboto';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import Ground from './Ground';
 import deepPurple from '@material-ui/core/colors/deepPurple';
-import teal from '@material-ui/core/colors/teal'
+import teal from '@material-ui/core/colors/teal';
+import Routings from './components/Routings';
 
 const theme = createMuiTheme({
   typography: {
@@ -41,7 +41,7 @@ class App extends Component {
     return (
       <div className="App">
       <MuiThemeProvider theme={theme}>
-          <Ground/>
+          <Routings/>
       </MuiThemeProvider>
       </div>
     );

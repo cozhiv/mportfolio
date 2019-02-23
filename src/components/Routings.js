@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route} from "react-router-dom";
-import MediaCard from './Card';
-import FloatingActionButtonZoom from './FloatingActionButtonZoom';
-import MenuAppBar from './MenuAppBar';
-import SimpleCard from './ContactCard';
+import HomePanel from './HomePanel';
+import ProjectsPanel from './ProjectsPanel';
+import NavigationBar from './NavigationBar';
+import ContactsPanel from './ContactsPanel';
 
 class Routings extends Component{
     render(){
@@ -11,10 +11,10 @@ class Routings extends Component{
             <div>
                 <Router>
                     <div>
-                    <MenuAppBar/>
-                    <Route exact path="/" component={MediaCard} />
-                    <Route path="/projects" component={FloatingActionButtonZoom} />
-                    <Route path="/contacts" component={SimpleCard} />
+                    <NavigationBar/>
+                    <Route exact path="/" component={HomePanel} />
+                    <Route path="/projects" component={ProjectsPanel} />
+                    <Route path="/contacts" component={ContactsPanel} />
                 </div>
                 </Router>
             </div>

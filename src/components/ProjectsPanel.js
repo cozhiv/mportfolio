@@ -7,9 +7,9 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import green from '@material-ui/core/colors/green';
-import DetailedExpansionPanel from './ExpansionPanel';
-import CustomizedExpansionPanel from './ContactsPanel';
-import ControlledExpansionPanels from './ControlledExpansionPanels';
+import SecondGroupProjects from './ProjectsGroup2';
+import ThirdGroupProjects from './ProjectsGroup3';
+import FirstGroupProjects from './ProjectsGroup1';
 function TabContainer(props) {
   const { children, dir } = props;
 
@@ -45,7 +45,7 @@ const styles = theme => ({
   },
 });
 
-class FloatingActionButtonZoom extends React.Component {
+class ProjectsPanel extends React.Component {
   state = {
     value: 0,
   };
@@ -83,9 +83,9 @@ class FloatingActionButtonZoom extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <TabContainer dir={theme.direction}><ControlledExpansionPanels/></TabContainer>
-          <TabContainer dir={theme.direction}><DetailedExpansionPanel/></TabContainer>
-          <TabContainer dir={theme.direction}><CustomizedExpansionPanel/></TabContainer>
+          <TabContainer dir={theme.direction}><FirstGroupProjects/></TabContainer>
+          <TabContainer dir={theme.direction}><SecondGroupProjects/></TabContainer>
+          <TabContainer dir={theme.direction}><ThirdGroupProjects/></TabContainer>
         </SwipeableViews>
         
       </div>
@@ -93,9 +93,9 @@ class FloatingActionButtonZoom extends React.Component {
   }
 }
 
-FloatingActionButtonZoom.propTypes = {
+ProjectsPanel.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(FloatingActionButtonZoom);
+export default withStyles(styles, { withTheme: true })(ProjectsPanel);

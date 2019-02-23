@@ -30,21 +30,16 @@ const styles = theme => ({
 class NavTabs extends React.Component {
     constructor(props){
         super(props)
-        //this.state = {value:'/'}
         this.handleChange = this.handleChange.bind(this)
     }
     
-  
-
   handleChange = (event, value) => {
     let selection = value
-    //this.setState({ value:selection });
     this.props.handleSelection(event, selection);
   };
 
   render() {
     const { classes } = this.props;
-    //const { value } = this.state;
     const { select } = this.props;
 
     return (
