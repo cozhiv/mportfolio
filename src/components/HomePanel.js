@@ -58,7 +58,7 @@ class HomePanel extends React.Component {
             write
           </Button>
            
-          <Button onClick={this.handleCall} size="small" color="primary">
+          <Button onClick={this.handleTalk} size="small" color="primary">
             Call
           </Button>
         </CardActions>
