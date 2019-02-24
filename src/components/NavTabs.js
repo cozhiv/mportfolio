@@ -32,7 +32,6 @@ class NavTabs extends React.Component {
         super(props)
         this.handleChange = this.handleChange.bind(this)
     }
-    
   handleChange = (event, value) => {
     let selection = value
     this.props.handleSelection(event, selection);

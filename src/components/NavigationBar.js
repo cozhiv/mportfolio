@@ -9,6 +9,7 @@ import { withStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import AppDrawer from './Drawer';
 import NavTabs from './NavTabs';
+
 const styles = theme => ({
   root: {
     width: '100%',

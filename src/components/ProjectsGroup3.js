@@ -73,7 +73,7 @@ class ThirdGroupProjects extends React.Component {
           <ExpansionPanelDetails>
             <Typography>
               Electronic device that measures the voltage fluctuations of nF capacitors by amplifying it with low-noise operational amplifiers. Determination of the Boltzmann constant applying Johnson-Nyquist theorem for the electronic circuit.
-              <ScienceArticleLink location="https://arxiv.org/abs/1703.05224"/>
+              <br/><ScienceArticleLink location="https://arxiv.org/abs/1703.05224"/>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -89,7 +89,7 @@ class ThirdGroupProjects extends React.Component {
           <ExpansionPanelDetails>
             <Typography>
               An experimental reactor for deposition of carbon nanostructures in atmospheric pressuere that uses mini source of microwave generated plasma. (Low temperature plasmas)
-              <ScienceArticleLink location='https://www.researchgate.net/publication/309686706_Plasma_reactor_for_deposition_of_carbon_nanowalls_at_atmospheric_pressure'/>
+              <br/><ScienceArticleLink location='https://www.researchgate.net/publication/309686706_Plasma_reactor_for_deposition_of_carbon_nanowalls_at_atmospheric_pressure'/>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>

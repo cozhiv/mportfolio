@@ -9,9 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import CallIcon from '@material-ui/icons/Call'
 import Fab from '@material-ui/core/Fab';
 import MailIcon from '@material-ui/icons/Mail';
-import LinkedInLink from './visuals/LinkedIn';
-import GitPic from './visuals/Github.png'
-
+import GitPic from './visuals/octocat26.svg';
+import LinkedInPic from './visuals/linkedin26.svg';
 
 const styles = theme=>({
   card: {
@@ -34,6 +33,9 @@ const styles = theme=>({
   extendedIcon: {
     marginRight: theme.spacing.unit,
   },
+  bottom:{
+    marginTop:"100",
+  }
 });
 
 class ContactsPanel extends Component{
@@ -49,18 +51,11 @@ class ContactsPanel extends Component{
         return (
             <Card className={classes.card}>
               <CardContent>
+              <Typography variant="h5" component="h2">
+              Zhivko Dimitrov
+              </Typography>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
-                  Zhivko Dimitrov
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  <Fab color="secondary" aria-label="Add" className={classes.fab} onClick={this.callZhi}>
-                  <CallIcon/> 
-                  </Fab> (+359)893-310-996
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  <Fab color="secondary" aria-label="Add" className={classes.fab} onClick={this.mailZhi}>
-                  <MailIcon/> 
-                  </Fab> cozhiv@gmail.com
+                  Sofia, Bulgaria
                 </Typography>
                 <br/><br/>
                 <Typography variant="h5" component="h2">
@@ -68,16 +63,27 @@ class ContactsPanel extends Component{
                 <a href='https://github.com/cozhiv' rel="noopener noreferrer" target="_blank">
                 <img src={GitPic} alt="GitHub icon"></img>
                  </a>
-                <LinkedInLink location="https://www.linkedin.com/in/zhivko-dimitrov-5601678a/"/>
+                 <span>  </span>
+                 <a  href='https://www.linkedin.com/in/zhivko-dimitrov-5601678a/' rel="noopener noreferrer" target="_blank">
+                 <img src={LinkedInPic} alt="LinkedIn icon"></img>
+                 </a>
                 
                 </Typography>
                 <Typography className={classes.pos} color="textSecondary">
                 
                 </Typography>
                 <Typography component="p">
-                  well meaning and kindly.
-                  <br />
-                  {'"a benevolent smile"'}
+                  
+                </Typography>
+                <Typography className={classes.bottom} variant="h5" component="h2">
+                  <Fab color="secondary" aria-label="Add" className={classes.fab} onClick={this.mailZhi}>
+                  <MailIcon/> 
+                  </Fab> cozhiv@gmail.com
+                </Typography>
+                <Typography variant="h5" component="h2">
+                  <Fab color="secondary" aria-label="Add" className={classes.fab} onClick={this.callZhi}>
+                  <CallIcon/> 
+                  </Fab> (+359)893-310-996
                 </Typography>
               </CardContent>
               <CardActions>

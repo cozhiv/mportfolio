@@ -51,10 +51,7 @@ class AppDrawer extends React.Component {
 
     const sideList = (
       <div className={classes.list}>
-      
-        
-        <List >
-          
+        <List >         
             <ListItem value='/' button key="Home" component={RouterLink} to="/" onClick={()=>{this.handleClick('/')}}>
             <ListItemIcon><AccountCircleIcon/></ListItemIcon>
             <ListItemText primary={"Home"} />
