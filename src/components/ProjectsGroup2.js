@@ -66,7 +66,7 @@ function SecondGroupProjects(props) {
           </div>
           <div className={classNames(classes.column, classes.helper)}>
             <Typography variant="caption">
-            JWT Token authentication/authoriazation, <br/> SQLAlchemy, Flask-Restful
+            JWT Token authentication/ authoriazation, <br/>SQLAlchemy, Flask-Restful
               <br />
               <a href="http://flask.pocoo.org/" rel="noopener noreferrer" target="_blank" className={classes.link}>
                 Learn more
